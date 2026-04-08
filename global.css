@@ -1,0 +1,38 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+ 
+@import "nativewind/theme";
+
+@theme {
+  --color-background: #fff9e3; /* 这是你的 bg-background 颜色 */
+  --color-primary: #E87A53;    /* 这是你的主色调，用法：bg-primary 或 text-primary */
+  --color-success: #16a34a;    /* 这是你的 text-success 颜色 */
+  --color-danger: #F04438;     /* 极其危险的警告色 */
+  --color-card: #FFFFFF;       /* 卡片背景色 */
+  --color-accent:#ea7a53;
+}
+
+/* global.css 底部 */
+
+@layer components {
+  /* 极其精准地定义导航栏外层容器 */
+  .tabs-icon {
+    @apply items-center justify-center;
+  }
+
+  /* 极其优雅的药丸状背景 */
+  .tabs-pill {
+    @apply w-12 h-12 rounded-full items-center justify-center ;
+  }
+
+  /* 极其耀眼的激活状态 */
+  .tabs-active {
+    @apply bg-accent;
+  }
+
+  /* 极其严格地控制图标物理尺寸 (修正你的 plyph) */
+  .tabs-glyph {
+    @apply w-6 h-6; 
+  }
+}
